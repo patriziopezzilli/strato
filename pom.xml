@@ -13,7 +13,7 @@
 	</modules>
 	<packaging>pom</packaging>
 
-	<name>strato-parent</name>
+	<name>Strato - Parent</name>
 	<description>Strato middle layer project</description>
 
 	<parent>
@@ -30,7 +30,33 @@
 	</properties>
 
 	<dependencyManagement>
-
+		<dependencies>
+			<dependency>
+				<groupId>com.patriziopezzilli</groupId>
+				<artifactId>strato-boot</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.patriziopezzilli</groupId>
+				<artifactId>strato-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.patriziopezzilli</groupId>
+				<artifactId>strato-interface</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hazelcast</groupId>
+				<artifactId>hazelcast</artifactId>
+				<version>3.7.2</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hazelcast</groupId>
+				<artifactId>hazelcast-client</artifactId>
+				<version>3.7.2</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
@@ -46,7 +72,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
